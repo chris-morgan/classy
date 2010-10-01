@@ -111,7 +111,7 @@ What you can do with Classy:
 
       var MyClass = Class.$extend({
         __init__ : function() { alert('called'); },
-        toString() : function() {
+        toString : function() {
           return this.value;
         })
       });
@@ -173,7 +173,7 @@ What you can do with Classy:
     
       var UpdateMixin = {
         update : function(options) {
-          var (var key in options)
+          for (var key in options)
             this[key] = options[key];
         }
       };
